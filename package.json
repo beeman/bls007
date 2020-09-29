@@ -32,7 +32,13 @@
     "build:admin": "nx build admin --prod",
     "docker:build": "docker build . -t bls007/api",
     "docker:run": "docker run -it -p 8000:3000 bls007/api",
-    "docker:push": "docker push bls007/api"
+    "docker:push": "docker push bls007/api",
+    "prisma:migrate": " npx prisma migrate save --experimental && npx prisma migrate up --experimental",
+    "prisma:generate": "npx prisma generate",
+    "prisma:format": "npx prisma format",
+    "prisma:apply": "yarn prisma:format && yarn prisma:migrate && yarn prisma:generate",
+    "sdk": "yarn graphql-codegen --config ./libs/admin/data-access/src/codegen.yml",
+    "sdk:watch": "yarn graphql-codegen --config ./libs/admin/data-access/src/codegen.yml --watch"
   },
   "private": true,
   "dependencies": {
@@ -50,9 +56,14 @@
     "@nestjs/config": "^0.5.0",
     "@nestjs/core": "^7.0.0",
     "@nestjs/graphql": "^7.7.0",
+    "@nestjs/jwt": "^7.1.0",
+    "@nestjs/passport": "^7.1.0",
     "@nestjs/platform-express": "^7.0.0",
+    "@prisma/cli": "^2.7.1",
+    "@prisma/client": "^2.7.1",
     "apollo-angular": "^2.0.4",
     "apollo-server-express": "^2.18.0",
+    "bcryptjs": "^2.4.3",
     "bootstrap": "^4.5.2",
     "bootswatch": "^4.5.2",
     "class-transformer": "^0.3.1",
@@ -61,6 +72,8 @@
     "graphql-tools": "^6.2.3",
     "graphql-type-json": "^0.3.2",
     "joi": "^17.2.1",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~6.5.5",
     "zone.js": "^0.10.2"
@@ -109,5 +122,8 @@
     "*.{js,json,css,scss,md,ts,html,graphql}": [
       "yarn run format --uncommitted"
     ]
+  },
+  "prisma": {
+    "schema": "libs/api/data-access/src/prisma/schema.prisma"
   }
 }

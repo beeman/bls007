@@ -61,6 +61,12 @@
     },
     "admin-feature-intercom": {
       "tags": ["scope:admin", "type:feature"]
+    },
+    "api-feature-profile": {
+      "tags": ["scope:api", "type:feature"]
+    },
+    "api-feature-project": {
+      "tags": ["scope:api", "type:feature"]
     }
   }
 }

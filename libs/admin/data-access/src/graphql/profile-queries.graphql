@@ -1,0 +1,25 @@
+fragment ProfileDetails on Profile {
+  id
+  username
+  avatarUrl
+  name
+  bio
+  location
+  lastSeen
+  status
+}
+
+query profiles {
+  profiles {
+    ...ProfileDetails
+  }
+}
+
+query profile($username: String!) {
+  profile(username: $username) {
+    ...ProfileDetails
+    projects {
+      ...ProjectDetails
+    }
+  }
+}

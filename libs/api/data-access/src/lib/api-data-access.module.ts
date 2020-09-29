@@ -6,7 +6,7 @@ import { ApiDataAccessService } from './api-data-access.service'
 
 @Module({
   controllers: [ApiDataAccessController],
-  exports: [],
+  exports: [ApiDataAccessService],
   imports: [],
   providers: [ApiDataAccessResolver, ApiDataAccessService],
 })

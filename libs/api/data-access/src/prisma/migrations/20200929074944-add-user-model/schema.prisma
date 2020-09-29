@@ -1,0 +1,35 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "sqlite"
+  url = "***"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        String    @default(cuid()) @id
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @default(now()) @updatedAt
+  isAdmin   Boolean   @default(false)
+  username  String    @unique
+  email     String    @unique
+  password  String
+  name      String?
+  avatarUrl String?
+  bio       String?
+  location  String?
+  projects  Project[] @relation("Project_BelongsTo_Owner")
+}
+
+model Project {
+  id        String   @default(cuid()) @id
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+  name      String   @unique
+  owner     User     @relation("Project_BelongsTo_Owner", fields: [ownerId], references: [id])
+  ownerId   String
+}

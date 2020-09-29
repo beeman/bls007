@@ -1,0 +1,6 @@
+# Prisma Migrate lockfile v1
+
+20200929074449
+20200929074944-add-user-model
+20200929082702-add-last-seen-property-to-user
+20200929083749-add-status-property

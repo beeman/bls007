@@ -4,10 +4,10 @@ import { AdminDataAccessService } from '@bls007/admin/data-access'
 @Component({
   template: `
     <h2>Dashboard</h2>
-    <pre>Server uptime: {{ uptime$ | async }}</pre>
+    <pre>Projects: {{ projects$ | async | json }}</pre>
   `,
 })
 export class AdminFeatureDashboardComponent {
-  public uptime$ = this.data.uptime()
+  public projects$ = this.data.sdk.projects()
   constructor(private readonly data: AdminDataAccessService) {}
 }
