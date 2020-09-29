@@ -138,8 +138,19 @@
             "polyfills": "apps/admin/src/polyfills.ts",
             "tsConfig": "apps/admin/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/admin/src/favicon.ico", "apps/admin/src/assets"],
-            "styles": ["apps/admin/src/styles.scss"],
+            "assets": [
+              {
+                "glob": "favicon.ico",
+                "input": "libs/admin/ui-assets/src",
+                "output": "./"
+              },
+              {
+                "glob": "**/*",
+                "input": "libs/admin/ui-assets/src/assets",
+                "output": "assets"
+              }
+            ],
+            "styles": ["apps/admin/src/styles.scss", "libs/admin/ui-style/src/index.scss"],
             "scripts": [],
             "allowedCommonJsDependencies": ["graphql-tag", "subscriptions-transport-ws", "zen-observable"]
           },
@@ -471,6 +482,57 @@
             "jestConfig": "libs/api/feature-project/jest.config.js",
             "passWithNoTests": true
           }
+        }
+      }
+    },
+    "admin-ui-layout": {
+      "projectType": "library",
+      "root": "libs/admin/ui-layout",
+      "sourceRoot": "libs/admin/ui-layout/src",
+      "prefix": "layout",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["libs/admin/ui-layout/tsconfig.lib.json", "libs/admin/ui-layout/tsconfig.spec.json"],
+            "exclude": ["**/node_modules/**", "!libs/admin/ui-layout/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/admin/ui-layout/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "admin-ui-style": {
+      "projectType": "library",
+      "root": "libs/admin/ui-style",
+      "sourceRoot": "libs/admin/ui-style/src",
+      "prefix": "style",
+      "architect": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "admin-ui-assets": {
+      "projectType": "library",
+      "root": "libs/admin/ui-assets",
+      "sourceRoot": "libs/admin/ui-assets/src",
+      "prefix": "assets",
+      "architect": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
         }
       }
     }

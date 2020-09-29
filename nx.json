@@ -35,7 +35,8 @@
       "tags": ["scope:api", "type:feature"]
     },
     "admin": {
-      "tags": []
+      "tags": [],
+      "implicitDependencies": ["admin-ui-assets", "admin-ui-style"]
     },
     "admin-e2e": {
       "tags": [],
@@ -67,6 +68,15 @@
     },
     "api-feature-project": {
       "tags": ["scope:api", "type:feature"]
+    },
+    "admin-ui-layout": {
+      "tags": ["scope:admin", "type:ui"]
+    },
+    "admin-ui-style": {
+      "tags": ["scope:admin", "type:ui"]
+    },
+    "admin-ui-assets": {
+      "tags": ["scope:admin", "type:ui"]
     }
   }
 }

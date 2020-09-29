@@ -27,7 +27,9 @@
       "@bls007/admin/feature-auth": ["libs/admin/feature-auth/src/index.ts"],
       "@bls007/admin/feature-intercom": ["libs/admin/feature-intercom/src/index.ts"],
       "@bls007/api/feature-profile": ["libs/api/feature-profile/src/index.ts"],
-      "@bls007/api/feature-project": ["libs/api/feature-project/src/index.ts"]
+      "@bls007/api/feature-project": ["libs/api/feature-project/src/index.ts"],
+      "@bls007/admin/ui-layout": ["libs/admin/ui-layout/src/index.ts"],
+      "@bls007/admin/ui-assets": ["libs/admin/ui-assets/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
