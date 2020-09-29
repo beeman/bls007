@@ -21,5 +21,43 @@
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "api": {
+      "tags": []
+    },
+    "api-data-access": {
+      "tags": ["scope:api", "type:data-access"]
+    },
+    "api-feature-core": {
+      "tags": ["scope:api", "type:feature"]
+    },
+    "api-feature-auth": {
+      "tags": ["scope:api", "type:feature"]
+    },
+    "admin": {
+      "tags": []
+    },
+    "admin-e2e": {
+      "tags": [],
+      "implicitDependencies": ["admin"]
+    },
+    "admin-data-access": {
+      "tags": ["scope:admin", "type:data-access"]
+    },
+    "admin-feature-about": {
+      "tags": ["scope:admin", "type:feature"]
+    },
+    "admin-feature-core": {
+      "tags": ["scope:admin", "type:feature"]
+    },
+    "admin-feature-dashboard": {
+      "tags": ["scope:admin", "type:feature"]
+    },
+    "admin-feature-shell": {
+      "tags": ["scope:admin", "type:feature"]
+    },
+    "admin-feature-auth": {
+      "tags": ["scope:admin", "type:feature"]
+    }
+  }
 }

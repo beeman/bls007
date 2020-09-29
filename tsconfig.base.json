@@ -15,7 +15,17 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@bls007/api/data-access": ["libs/api/data-access/src/index.ts"],
+      "@bls007/api/feature-core": ["libs/api/feature-core/src/index.ts"],
+      "@bls007/api/feature-auth": ["libs/api/feature-auth/src/index.ts"],
+      "@bls007/admin/data-access": ["libs/admin/data-access/src/index.ts"],
+      "@bls007/admin/feature-about": ["libs/admin/feature-about/src/index.ts"],
+      "@bls007/admin/feature-core": ["libs/admin/feature-core/src/index.ts"],
+      "@bls007/admin/feature-dashboard": ["libs/admin/feature-dashboard/src/index.ts"],
+      "@bls007/admin/feature-shell": ["libs/admin/feature-shell/src/index.ts"],
+      "@bls007/admin/feature-auth": ["libs/admin/feature-auth/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
