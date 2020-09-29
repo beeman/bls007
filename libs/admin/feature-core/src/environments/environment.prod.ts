@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  graphqlUri: '/graphql',
+  graphql: '/graphql',
 }

@@ -5,7 +5,7 @@ import { Component } from '@angular/core'
     <h1>
       Admin
       <small>
-        &nbsp; <a routerLink="/dashboard">Dashboard</a> &nbsp;
+        &nbsp; <a routerLink="/dashboard">Dashboard</a> &nbsp; <a routerLink="/intercom">Intercom</a> &nbsp;
         <a routerLink="/about">About</a>
       </small>
     </h1>

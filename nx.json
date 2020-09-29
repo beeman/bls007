@@ -58,6 +58,9 @@
     },
     "admin-feature-auth": {
       "tags": ["scope:admin", "type:feature"]
+    },
+    "admin-feature-intercom": {
+      "tags": ["scope:admin", "type:feature"]
     }
   }
 }

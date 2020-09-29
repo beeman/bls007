@@ -141,7 +141,7 @@
             "assets": ["apps/admin/src/favicon.ico", "apps/admin/src/assets"],
             "styles": ["apps/admin/src/styles.scss"],
             "scripts": [],
-            "allowedCommonJsDependencies": ["graphql-tag", "zen-observable"]
+            "allowedCommonJsDependencies": ["graphql-tag", "subscriptions-transport-ws", "zen-observable"]
           },
           "configurations": {
             "production": {
@@ -390,6 +390,36 @@
           "builder": "@nrwl/jest:jest",
           "options": {
             "jestConfig": "libs/admin/feature-auth/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
+    },
+    "admin-feature-intercom": {
+      "projectType": "library",
+      "root": "libs/admin/feature-intercom",
+      "sourceRoot": "libs/admin/feature-intercom/src",
+      "prefix": "intercom",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/admin/feature-intercom/tsconfig.lib.json",
+              "libs/admin/feature-intercom/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/admin/feature-intercom/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/admin/feature-intercom/jest.config.js",
             "passWithNoTests": true
           }
         }

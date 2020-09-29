@@ -19,6 +19,10 @@ const routes: Routes = [
         path: 'dashboard',
         loadChildren: () => import('@bls007/admin/feature-dashboard').then((m) => m.AdminFeatureDashboardModule),
       },
+      {
+        path: 'intercom',
+        loadChildren: () => import('@bls007/admin/feature-intercom').then((m) => m.AdminFeatureIntercomModule),
+      },
     ],
   },
 ]
