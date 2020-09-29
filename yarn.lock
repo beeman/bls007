@@ -2246,18 +2246,7 @@
   dependencies:
     mkdirp "^1.0.4"
 
-"@nrwl/angular@^10.0.0":
-  version "10.2.1"
-  resolved "https://registry.yarnpkg.com/@nrwl/angular/-/angular-10.2.1.tgz#b5d36547c25e08d8bd8251c9d0a54435681e5053"
-  integrity sha512-OW8YQ4yniih62DN/pM0/NFj2/uykRJg6M1rbCvKxPlY7OpcDDRueWXLcSWmu3PIbBxDumzPYu3pPtn4DLkWVWA==
-  dependencies:
-    "@angular-devkit/schematics" "~10.0.0"
-    "@nrwl/cypress" "10.2.1"
-    "@nrwl/jest" "10.2.1"
-    "@schematics/angular" "~10.0.0"
-    jasmine-marbles "~0.6.0"
-
-"@nrwl/angular@^10.2.1":
+"@nrwl/angular@^10.0.0", "@nrwl/angular@^10.2.1":
   version "10.2.1"
   resolved "http://localhost:4873/@nrwl%2fangular/-/angular-10.2.1.tgz#b5d36547c25e08d8bd8251c9d0a54435681e5053"
   integrity sha512-OW8YQ4yniih62DN/pM0/NFj2/uykRJg6M1rbCvKxPlY7OpcDDRueWXLcSWmu3PIbBxDumzPYu3pPtn4DLkWVWA==
@@ -2314,17 +2303,7 @@
     minimatch "3.0.4"
     tslib "^1.9.3"
 
-"@nrwl/nest@^10.0.0":
-  version "10.2.1"
-  resolved "https://registry.yarnpkg.com/@nrwl/nest/-/nest-10.2.1.tgz#4b0e6e987cd7dd7e8e66b00a236f7b904547da24"
-  integrity sha512-oyuV2N2nFf90HI4SzINuz7BTxlQ2iPThG6E0684oSU+HtTkRXnxA83PJRsOJwgIfDMj+Z98y/8UTDwVWiqXq3g==
-  dependencies:
-    "@angular-devkit/schematics" "~10.0.0"
-    "@nestjs/schematics" "^7.0.0"
-    "@nrwl/jest" "10.2.1"
-    "@nrwl/node" "10.2.1"
-
-"@nrwl/nest@^10.2.1":
+"@nrwl/nest@^10.0.0", "@nrwl/nest@^10.2.1":
   version "10.2.1"
   resolved "http://localhost:4873/@nrwl%2fnest/-/nest-10.2.1.tgz#4b0e6e987cd7dd7e8e66b00a236f7b904547da24"
   integrity sha512-oyuV2N2nFf90HI4SzINuz7BTxlQ2iPThG6E0684oSU+HtTkRXnxA83PJRsOJwgIfDMj+Z98y/8UTDwVWiqXq3g==
@@ -4266,6 +4245,18 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   version "1.0.0"
   resolved "http://localhost:4873/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
+
+bootstrap@^4.5.2:
+  version "4.5.2"
+  resolved "http://localhost:4873/bootstrap/-/bootstrap-4.5.2.tgz#a85c4eda59155f0d71186b6e6ad9b875813779ab"
+  integrity sha512-vlGn0bcySYl/iV+BGA544JkkZP5LB3jsmkeKLFQakCOwCM3AOk7VkldBz4jrzSe+Z0Ezn99NVXa1o45cQY4R6A==
+
+bootswatch@^4.5.2:
+  version "4.5.2"
+  resolved "http://localhost:4873/bootswatch/-/bootswatch-4.5.2.tgz#da2d7b5cf37b07763e2e86c67bc30256821522a4"
+  integrity sha512-Dfco9gxVtBhh8CVXkMjGLm/vNr2xjSK74agSvPVr3rrVhxFuvB/VELaLAqNH8sLeKVWBMNGwHUJS1gT3J2NYDQ==
+  dependencies:
+    websocket-driver "^0.7.4"
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -14017,7 +14008,7 @@ websocket-driver@0.6.5:
   dependencies:
     websocket-extensions ">=0.1.1"
 
-websocket-driver@>=0.5.1:
+websocket-driver@>=0.5.1, websocket-driver@^0.7.4:
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/websocket-driver/-/websocket-driver-0.7.4.tgz#89ad5295bbf64b480abcba31e4953aca706f5760"
   integrity sha512-b17KeDIQVjvb0ssuSDF2cYXSg2iztliJ4B9WdsuB6J952qCPKmnVq4DyW5motImXHDC1cBT/1UezrJVsKw5zjg==

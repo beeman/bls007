@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+$app-color: #f39c12;
+$link-color: $app-color;
+
+@import '~bootswatch/dist/darkly/variables';
+@import '~bootstrap/scss/bootstrap';
+@import '~bootswatch/dist/darkly/bootswatch';
