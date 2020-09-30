@@ -1,6 +1,5 @@
-import { Injectable, Logger } from '@nestjs/common'
+import { Injectable } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
-import { join } from 'path'
 
 @Injectable()
 export class ApiFeatureCoreService {
@@ -8,6 +7,15 @@ export class ApiFeatureCoreService {
 
   uptime(): number {
     return process.uptime()
+  }
+
+  configuration(): any {
+    return {
+      environment: this.config.get('environment'),
+      host: this.config.get('host'),
+      port: this.config.get('port'),
+      apiUrl: this.config.get('apiUrl'),
+    }
   }
 
   get apiUrl(): string {

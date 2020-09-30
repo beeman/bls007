@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common'
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
+import { AdminFeatureCoreModule } from '@bls007/admin/feature-core'
 
 import { AdminFeatureShellComponent } from './admin-feature-shell.component'
 
@@ -29,6 +30,6 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [AdminFeatureShellComponent],
-  imports: [CommonModule, RouterModule.forRoot(routes)],
+  imports: [CommonModule, RouterModule.forRoot(routes), AdminFeatureCoreModule],
 })
 export class AdminFeatureShellModule {}

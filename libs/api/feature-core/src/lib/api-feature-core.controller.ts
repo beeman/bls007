@@ -9,4 +9,9 @@ export class ApiFeatureCoreController {
   uptime() {
     return this.service.uptime()
   }
+
+  @Get('config')
+  config() {
+    return this.service.configuration()
+  }
 }
